@@ -1,23 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="DIVIZTY 5 - election edition" />
+    <meta
+      name="description"
+      content="DIVIZTY 5 Student Council Election homepage"
+    />
     <title>DIVIZTY 5</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="page-shell">
       <header class="site-header">
         <div class="container nav">
-          <a href="#" class="brand" aria-label="DIVIZTY home">
-            <span class="brand-script">Divizty</span>
+          <a href="#home" class="brand" aria-label="DIVIZTY home">
+            <span class="brand-text">DIVIZTY</span>
             <span class="brand-number">5</span>
           </a>
+
+          <div class="header-meta">
+            <span class="header-title">STUDENT COUNCIL ELECTION</span>
+            <span class="header-edition">/ 16TH EDITION</span>
+          </div>
 
           <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
             <span></span>
@@ -26,21 +37,21 @@
           </button>
 
           <nav class="nav-menu" aria-label="Main navigation">
-            <a href="#" class="active">HOME</a>
-            <a href="#">POLICY</a>
-            <a href="#">CANDIDATES</a>
-            <a href="#">PROFILE</a>
-            <a href="#">CONTACT</a>
+            <a href="#home" class="active">HOME</a>
+            <a href="#policy">POLICY</a>
+            <a href="#candidates">CANDIDATES</a>
+            <a href="#profile">PROFILE</a>
+            <a href="#contact">CONTACT</a>
           </nav>
 
           <div class="lang-switch">TH / EN</div>
         </div>
       </header>
 
-      <main class="hero-screen">
+      <main id="home" class="hero-screen">
         <div class="bg-orb orb-left"></div>
         <div class="bg-orb orb-right"></div>
-        <div class="bg-orb orb-top-center"></div>
+        <div class="bg-orb orb-center"></div>
 
         <div class="float-dot dot-1"></div>
         <div class="float-dot dot-2"></div>
@@ -51,7 +62,7 @@
         <div class="float-dot dot-7"></div>
         <div class="float-dot dot-8"></div>
 
-        <div class="star-shell">
+        <div class="star-shell" aria-label="DIVIZTY 5 election star poster">
           <div class="star">
             <div class="star-content">
               <h1 class="main-title">
@@ -67,16 +78,19 @@
               </div>
 
               <div class="cta-stack">
-                <a href="#" class="cta-btn pink-btn">MBTI test ↗</a>
-                <a href="#" class="cta-btn lime-btn">GO TO GAME → CLICK</a>
+                <a href="#profile" class="cta-btn pink-btn">MBTI test ↗</a>
+                <a href="#candidates" class="cta-btn lime-btn">GO TO GAME → CLICK</a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="yellow-note">ตั้งก่อนได้<br />ไม่ควรได้</div>
+        <div class="yellow-note">
+          <span>ต่างกันได้</span>
+          <span>ไปด้วยกันได้</span>
+        </div>
 
-        <div class="team-badge">
+        <div class="team-badge" id="contact">
           <span class="team-label">ทีมหมายเลข</span>
           <span class="team-number">5</span>
         </div>
@@ -85,11 +99,11 @@
       <footer class="bottom-bar">
         <div class="container bottom-wrap">
           <nav class="bottom-nav" aria-label="Footer navigation">
-            <a href="#" class="bottom-pill active">HOME</a>
-            <a href="#" class="bottom-pill">POLICY</a>
-            <a href="#" class="bottom-pill">CANDIDATES</a>
-            <a href="#" class="bottom-pill">PROFILE</a>
-            <a href="#" class="bottom-pill">CONTACT</a>
+            <a href="#home" class="bottom-pill active">HOME</a>
+            <a href="#policy" class="bottom-pill">POLICY</a>
+            <a href="#candidates" class="bottom-pill">CANDIDATES</a>
+            <a href="#profile" class="bottom-pill">PROFILE</a>
+            <a href="#contact" class="bottom-pill">CONTACT</a>
           </nav>
 
           <div class="bottom-cta">MEET YOUR NEXT CHAPTER ↓</div>
