@@ -226,17 +226,20 @@ button {
 
 .star-shell {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: min(760px, 74vw);
+  height: min(760px, 74vw);
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .star {
-  position: relative;
-  width: min(760px, 74vw);
-  aspect-ratio: 1;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(180deg, #f3f1f6, #e9e8ee);
   clip-path: polygon(
     50% 0%, 61% 34%, 100% 38%, 70% 59%,
@@ -257,13 +260,15 @@ button {
 
 .star-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2.8rem 4rem 2rem;
+  padding: clamp(1.4rem, 3vw, 2.8rem) clamp(1.5rem, 4vw, 4rem) clamp(1rem, 2vw, 2rem);
   isolation: isolate;
 }
 
@@ -274,11 +279,12 @@ button {
   gap: .08em;
   margin: 0;
   font-family: var(--font-primary);
-  line-height: .82;
+  line-height: .92;
   letter-spacing: -.09em;
   color: var(--ink);
   position: relative;
-  z-index: 3;
+  z-index: 4;
+  white-space: nowrap;
 }
 
 .main-word,
@@ -286,15 +292,16 @@ button {
   display: inline-block;
   font-family: var(--font-primary);
   font-weight: 700;
+  line-height: .9;
 }
 
 .main-word {
-  font-size: clamp(5.6rem, 7vw, 9.5rem);
+  font-size: clamp(3.8rem, 5.8vw, 8.4rem);
   font-weight: 700;
 }
 
 .main-number {
-  font-size: clamp(5rem, 6vw, 8.2rem);
+  font-size: clamp(3.2rem, 5vw, 7rem);
   font-weight: 600;
 }
 
@@ -306,7 +313,8 @@ button {
   line-height: 1.5;
   color: var(--muted);
   position: relative;
-  z-index: 3;
+  z-index: 4;
+  max-width: 80%;
 }
 
 .thai-copy p {
@@ -320,7 +328,7 @@ button {
   gap: .8rem;
   margin-top: 1.2rem;
   position: relative;
-  z-index: 3;
+  z-index: 4;
 }
 
 .cta-btn {
@@ -338,7 +346,7 @@ button {
   box-shadow: 0 10px 18px rgba(87,77,119,.08);
   transition: .22s ease;
   position: relative;
-  z-index: 3;
+  z-index: 4;
 }
 
 .cta-btn:hover {
@@ -421,21 +429,10 @@ button {
   background: rgba(255,255,255,.3);
 }
 
-.policy-card {
-  background: rgba(223,228,248,.5);
-}
-
-.candidates-card {
-  background: rgba(201,235,139,.28);
-}
-
-.profile-card {
-  background: rgba(244,199,216,.35);
-}
-
-.contact-card {
-  background: rgba(243,231,154,.3);
-}
+.policy-card { background: rgba(223,228,248,.5); }
+.candidates-card { background: rgba(201,235,139,.28); }
+.profile-card { background: rgba(244,199,216,.35); }
+.contact-card { background: rgba(243,231,154,.3); }
 
 .eyebrow {
   margin: 0 0 .8rem;
@@ -574,14 +571,20 @@ button {
 
   .star-shell {
     width: min(560px, 88vw);
+    height: min(560px, 88vw);
   }
 
   .star {
-    width: min(520px, 84vw);
+    width: 100%;
+    height: 100%;
   }
 
   .star-content {
     padding: 1.5rem 2rem 1rem;
+  }
+
+  .thai-copy {
+    max-width: 90%;
   }
 
   .yellow-note,
@@ -628,6 +631,7 @@ button {
   .thai-copy {
     font-size: .62rem;
     line-height: 1.5;
+    max-width: 92%;
   }
 
   .cta-btn {
