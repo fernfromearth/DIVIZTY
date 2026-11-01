@@ -1,42 +1,42 @@
-const navToggle = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('.nav-menu');
-const navLinks = document.querySelectorAll('.nav-menu a');
-const yearEl = document.getElementById('year');
-
-if (yearEl) {
-  yearEl.textContent = new Date().getFullYear();
-}
+const navToggle = document.querySelector(".nav-toggle");
+const navMenu = document.querySelector(".nav-menu");
 
 if (navToggle && navMenu) {
-  navToggle.addEventListener('click', () => {
-    const isOpen = navMenu.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', String(isOpen));
+  navToggle.addEventListener("click", () => {
+    const isOpen = navMenu.classList.toggle("open");
+
+    navToggle.setAttribute("aria-expanded", isOpen);
   });
 
-  navLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
+  // ปิดเมนูเมื่อกดเลือกลิงก์
+  navMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
     });
   });
 }
 
-const revealItems = document.querySelectorAll('.reveal');
+// เปลี่ยนเมนูที่ active ตาม section ที่กำลังดู
+const sections = document.querySelectorAll("main section[id]");
+const navLinks = document.querySelectorAll(".nav-pill, .bottom-pill");
 
-if ('IntersectionObserver' in window) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.16 }
-  );
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const currentId = entry.target.id;
 
-  revealItems.forEach((item) => observer.observe(item));
-} else {
-  revealItems.forEach((item) => item.classList.add('visible'));
-}
+        navLinks.forEach((link) => {
+          link.classList.toggle(
+            "active",
+            link.getAttribute("href") === `#${currentId}`
+          );
+        });
+      }
+    });
+  },
+  { threshold: 0.45 }
+);
+
+sections.forEach((section) => observer.observe(section));
