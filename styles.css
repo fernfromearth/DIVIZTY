@@ -1,4 +1,12 @@
 :root {
+  --bg: #ffffff;
+  --primary: #b9a5ef;
+
+  /* Font settings */
+  --font-en: "Syne", sans-serif;
+  --font-th: "LINE Seed Sans TH", sans-serif;
+}
+:root {
   --font-en: "Syne", sans-serif;
   --font-th: "LINE Seed Sans TH", sans-serif;
 
