@@ -1,28 +1,25 @@
 /* =========================================================
-   DIVIZTY 5 - Homepage Styles
-   Pastel editorial student election landing page
+   DIVIZTY 5 - Typography + Layout Styles
+   Updated to use the Syne / LINE Seed Sans TH pairing
    ========================================================= */
 
-/* Root theme */
+/* Font variables */
 :root {
-  --bg-1: #f9f4fb;
+  --font-en: "Syne", sans-serif;
+  --font-th: "LINE Seed Sans TH", sans-serif;
+
+  --bg-1: #f8f1f9;
   --bg-2: #dfeef8;
   --lavender: #dfe4f8;
-  --lavender-deep: #af9ce8;
-  --purple: #8d76d8;
-  --pink: #f4c7d8;
-  --pink-soft: #f9dfe7;
-  --lime: #c9eb8b;
-  --lime-soft: #eaf9c1;
-  --gold: #f3e79a;
-  --cream: #f7f3eb;
   --ink: #1d1a27;
   --muted: rgba(28, 26, 38, 0.8);
-  --panel: rgba(255, 255, 255, 0.18);
-  --panel-strong: rgba(255, 255, 255, 0.28);
-  --line: rgba(29, 26, 39, 0.08);
+  --purple: #8d76d8;
+  --pink: #f4c7d8;
+  --lime: #c9eb8b;
+  --gold: #f3e79a;
+  --silver-1: #f5f3f7;
+  --silver-2: #e7e5ea;
   --shadow: rgba(118, 126, 158, 0.12);
-  --shadow-strong: rgba(124, 106, 159, 0.16);
 }
 
 /* Global resets */
@@ -32,13 +29,12 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "DM Sans", "Noto Sans Thai", sans-serif;
+  font-family: var(--font-th);
   color: var(--ink);
   background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
   overflow-x: hidden;
@@ -54,24 +50,22 @@ a {
   text-decoration: none;
 }
 
-button,
-input,
-textarea,
-select {
+button {
   font: inherit;
 }
 
+/* Page shell */
 .page-shell {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
   background:
-    radial-gradient(circle at 18% 10%, rgba(255, 255, 255, 0.5), transparent 16%),
-    radial-gradient(circle at 82% 12%, rgba(255, 255, 255, 0.42), transparent 18%),
+    radial-gradient(circle at 16% 12%, rgba(255, 255, 255, 0.48), transparent 18%),
+    radial-gradient(circle at 88% 12%, rgba(255, 255, 255, 0.36), transparent 20%),
     linear-gradient(180deg, #f9f3fb 0%, #dfeef8 100%);
 }
 
-/* Layout helpers */
+/* Layout */
 .container {
   width: min(1280px, calc(100% - 2rem));
   margin: 0 auto;
@@ -92,12 +86,16 @@ select {
   min-height: 70px;
 }
 
+/* Brand / logo */
 .brand {
   display: inline-flex;
   align-items: baseline;
   gap: 0.08em;
-  line-height: 1;
   color: var(--ink);
+  line-height: 1;
+  font-family: var(--font-en);
+  font-weight: 700;
+  letter-spacing: -0.06em;
   transition: transform 0.2s ease;
 }
 
@@ -107,19 +105,22 @@ select {
 
 .brand-script,
 .brand-number {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-en);
   font-weight: 700;
   letter-spacing: -0.08em;
 }
 
 .brand-script {
-  font-size: clamp(2.3rem, 2vw, 2.9rem);
+  font-size: clamp(2.2rem, 2vw, 2.8rem);
+  font-weight: 800;
 }
 
 .brand-number {
-  font-size: clamp(2.2rem, 1.9vw, 2.8rem);
+  font-size: clamp(2.1rem, 1.9vw, 2.5rem);
+  font-weight: 700;
 }
 
+/* Main nav */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -138,8 +139,9 @@ select {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.06);
   color: rgba(28, 26, 38, 0.8);
+  font-family: var(--font-en);
   font-size: 0.68rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   transition:
@@ -160,6 +162,7 @@ select {
 }
 
 .lang-switch {
+  font-family: var(--font-en);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -308,13 +311,14 @@ select {
   padding: 2.8rem 4rem 2rem;
 }
 
+/* Main star title */
 .main-title {
   display: flex;
   align-items: flex-end;
   justify-content: center;
   gap: 0.08em;
   margin: 0;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-en);
   line-height: 0.82;
   letter-spacing: -0.09em;
   color: var(--ink);
@@ -324,21 +328,25 @@ select {
 .main-word,
 .main-number {
   display: inline-block;
+  font-family: var(--font-en);
   font-weight: 700;
 }
 
 .main-word {
   font-size: clamp(5.6rem, 7vw, 9.5rem);
+  font-weight: 800;
 }
 
 .main-number {
   font-size: clamp(5rem, 6vw, 8.2rem);
+  font-weight: 700;
 }
 
+/* Thai intro text */
 .thai-copy {
   margin-top: 0.4rem;
-  font-family: "Noto Sans Thai", sans-serif;
-  font-weight: 700;
+  font-family: var(--font-th);
+  font-weight: 600;
   font-size: clamp(0.72rem, 0.86vw, 1.06rem);
   line-height: 1.5;
   color: rgba(28, 26, 38, 0.82);
@@ -348,6 +356,7 @@ select {
   margin: 0;
 }
 
+/* CTAs */
 .cta-stack {
   display: flex;
   flex-direction: column;
@@ -364,7 +373,7 @@ select {
   min-height: 46px;
   padding: 0.72rem 1.2rem;
   border-radius: 14px;
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--font-en);
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -391,7 +400,7 @@ select {
   color: rgba(28, 26, 38, 0.86);
 }
 
-/* Floating note and badge */
+/* Note and badge */
 .yellow-note {
   position: absolute;
   left: 4.5rem;
@@ -407,6 +416,7 @@ select {
   padding: 0.84rem 1rem;
   background: var(--gold);
   color: rgba(28, 26, 38, 0.8);
+  font-family: var(--font-th);
   font-size: 0.72rem;
   font-weight: 600;
   line-height: 1.3;
@@ -436,6 +446,7 @@ select {
 .team-label {
   display: block;
   margin-bottom: 0.12rem;
+  font-family: var(--font-th);
   font-size: 0.7rem;
   line-height: 1.2;
   font-weight: 500;
@@ -443,13 +454,13 @@ select {
 }
 
 .team-number {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-en);
   font-size: 4rem;
   line-height: 1;
   font-weight: 700;
 }
 
-/* Bottom navigation */
+/* Bottom nav */
 .bottom-bar {
   position: relative;
   z-index: 15;
@@ -485,8 +496,9 @@ select {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.12);
   color: rgba(28, 26, 38, 0.8);
+  font-family: var(--font-en);
   font-size: 0.66rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   transition:
@@ -506,6 +518,7 @@ select {
 
 .bottom-cta {
   white-space: nowrap;
+  font-family: var(--font-en);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -513,8 +526,7 @@ select {
   color: rgba(28, 26, 38, 0.8);
 }
 
-/* CONTENT SECTIONS: POLICY / CANDIDATES / PROFILE
-   These selectors match the provided page structure and keep the same pastel identity */
+/* Policy / Candidates / Profile sections */
 section[id="policy"],
 section[id="candidates"],
 section[id="profile"] {
@@ -548,10 +560,11 @@ section[id="policy"] h2,
 section[id="candidates"] h2,
 section[id="profile"] h2 {
   margin: 0 0 0.9rem;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-en);
   font-size: clamp(2rem, 2.6vw, 3rem);
   line-height: 1;
   letter-spacing: -0.04em;
+  font-weight: 700;
   color: var(--ink);
   text-transform: uppercase;
 }
@@ -561,8 +574,10 @@ section[id="candidates"] p,
 section[id="profile"] p {
   margin: 0;
   max-width: 52rem;
+  font-family: var(--font-th);
   font-size: clamp(0.96rem, 1.4vw, 1.12rem);
   line-height: 1.8;
+  font-weight: 500;
   color: rgba(29, 26, 39, 0.82);
 }
 
