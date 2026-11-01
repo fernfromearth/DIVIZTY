@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="th">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="DIVIZTY 5 Student Council Election homepage"
-    />
-    <title>DIVIZTY 5</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DIVIZTY 5 — Student Council Election">
+  <title>DIVIZTY 5 | Student Election</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=LINE+Seed+Sans+TH:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <div class="container nav">
-          <div class="brand" aria-label="DIVIZTY home">
-            <span class="brand-script">Divizty</span>
-            <span class="brand-number">5</span>
-          </div>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
 
-          <nav class="nav-menu" aria-label="Main navigation">
-            <a href="#home" class="nav-pill active">HOME</a>
-            <a href="#policy" class="nav-pill">POLICY</a>
-            <a href="#candidates" class="nav-pill">CANDIDATES</a>
-            <a href="#profile" class="nav-pill">PROFILE</a>
-            <a href="#contact" class="nav-pill">CONTACT</a>
-          </nav>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="#home" class="brand">
+          <span class="brand-script">DIVIZTY</span>
+          <span class="brand-number">5</span>
+        </a>
 
-          <div class="lang-switch">TH / EN</div>
-        </div>
-      </header>
+        <button class="nav-toggle" aria-label="เปิดเมนู" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
 
-      <main id="home" class="hero-screen">
+        <nav class="nav-menu" aria-label="Main navigation">
+          <a class="nav-pill active" href="#home">HOME</a>
+          <a class="nav-pill" href="#policy">POLICY</a>
+          <a class="nav-pill" href="#candidates">CANDIDATES</a>
+          <a class="nav-pill" href="#profile">PROFILE</a>
+          <a class="nav-pill" href="#contact">CONTACT</a>
+        </nav>
+
+        <div class="lang-switch">TH / EN</div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-screen" id="home">
         <div class="bg-orb orb-left"></div>
         <div class="bg-orb orb-right"></div>
         <div class="bg-orb orb-center"></div>
@@ -53,11 +53,11 @@
         <div class="float-dot dot-7"></div>
         <div class="float-dot dot-8"></div>
 
-        <div class="star-shell" aria-label="DIVIZTY 5 election poster">
+        <div class="star-shell">
           <div class="star">
             <div class="star-content">
-              <h1 class="main-title" aria-label="Divizty 5">
-                <span class="main-word">Divizty</span>
+              <h1 class="main-title">
+                <span class="main-word">DIVIZTY</span>
                 <span class="main-number">5</span>
               </h1>
 
@@ -69,7 +69,7 @@
               </div>
 
               <div class="cta-stack">
-                <a href="#profile" class="cta-btn pink-btn">MBTI test ↗</a>
+                <a href="#profile" class="cta-btn pink-btn">MBTI TEST ↗</a>
                 <a href="#candidates" class="cta-btn lime-btn">GO TO GAME → CLICK</a>
               </div>
             </div>
@@ -81,25 +81,62 @@
           <span>ไปด้วยกันได้</span>
         </div>
 
-        <div class="team-badge" id="contact">
+        <div class="team-badge">
           <span class="team-label">ทีมหมายเลข</span>
           <span class="team-number">5</span>
         </div>
-      </main>
+      </section>
 
-      <footer class="bottom-bar">
-        <nav class="bottom-nav" aria-label="Footer navigation">
-          <a href="#home" class="bottom-pill active">HOME</a>
-          <a href="#policy" class="bottom-pill">POLICY</a>
-          <a href="#candidates" class="bottom-pill">CANDIDATES</a>
-          <a href="#profile" class="bottom-pill">PROFILE</a>
-          <a href="#contact" class="bottom-pill">CONTACT</a>
-        </nav>
+      <section id="policy" class="content-section">
+        <div class="container section-card policy-card">
+          <p class="eyebrow">01 — OUR PROMISE</p>
+          <h2>OUR POLICY</h2>
+          <p>เพราะทุกเสียงมีความหมาย เราพร้อมรับฟังความคิดเห็นและพัฒนาพื้นที่โรงเรียนให้ดีขึ้นไปด้วยกัน</p>
+          <a class="section-link" href="#contact">DISCOVER MORE ↗</a>
+        </div>
+      </section>
 
-        <div class="bottom-cta">MEET YOUR NEXT CHAPTER ↓</div>
-      </footer>
-    </div>
+      <section id="candidates" class="content-section">
+        <div class="container section-card candidates-card">
+          <p class="eyebrow">02 — THE TEAM</p>
+          <h2>MEET THE TEAM</h2>
+          <p>ทำความรู้จักสมาชิกทีม DIVIZTY หมายเลข 5 และบทบาทของแต่ละคน</p>
+          <a class="section-link" href="#contact">MEET US ↗</a>
+        </div>
+      </section>
 
-    <script src="script.js"></script>
-  </body>
+      <section id="profile" class="content-section">
+        <div class="container section-card profile-card">
+          <p class="eyebrow">03 — GET TO KNOW YOURSELF</p>
+          <h2>YOUR PROFILE</h2>
+          <p>มาค้นหาตัวตนและทำความรู้จักตัวเองผ่านกิจกรรมสนุก ๆ ไปด้วยกัน</p>
+          <a class="section-link" href="#contact">START EXPLORING ↗</a>
+        </div>
+      </section>
+
+      <section id="contact" class="content-section">
+        <div class="container section-card contact-card">
+          <p class="eyebrow">04 — STAY CONNECTED</p>
+          <h2>CONTACT US</h2>
+          <p>ติดตามข่าวสาร กิจกรรม และข้อมูลเพิ่มเติมจากทีม DIVIZTY</p>
+          <a class="section-link" href="#home">BACK TO TOP ↑</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bottom-bar">
+      <nav class="bottom-nav" aria-label="Footer navigation">
+        <a class="bottom-pill active" href="#home">HOME</a>
+        <a class="bottom-pill" href="#policy">POLICY</a>
+        <a class="bottom-pill" href="#candidates">CANDIDATES</a>
+        <a class="bottom-pill" href="#profile">PROFILE</a>
+        <a class="bottom-pill" href="#contact">CONTACT</a>
+      </nav>
+      <div class="bottom-cta">MEET YOUR NEXT CHAPTER ↓</div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
