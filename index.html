@@ -8,55 +8,56 @@
       content="DIVIZTY 5 Student Council Election homepage"
     />
     <title>DIVIZTY 5</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=LINE+Seed+Sans+TH:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="page-shell">
       <header class="site-header">
         <div class="container nav">
-          <a href="#home" class="brand" aria-label="DIVIZTY 5 หน้าแรก">
-            <span class="brand-script">DIVIZTY</span>
+          <div class="brand" aria-label="DIVIZTY home">
+            <span class="brand-script">Divizty</span>
             <span class="brand-number">5</span>
-          </a>
+          </div>
 
-          <nav class="nav-menu" aria-label="เมนูหลัก">
-            <a href="#home" class="nav-pill active" aria-current="page">HOME</a>
+          <nav class="nav-menu" aria-label="Main navigation">
+            <a href="#home" class="nav-pill active">HOME</a>
             <a href="#policy" class="nav-pill">POLICY</a>
             <a href="#candidates" class="nav-pill">CANDIDATES</a>
             <a href="#profile" class="nav-pill">PROFILE</a>
             <a href="#contact" class="nav-pill">CONTACT</a>
           </nav>
 
-          <div class="lang-switch" aria-label="เปลี่ยนภาษา">TH / EN</div>
+          <div class="lang-switch">TH / EN</div>
         </div>
       </header>
 
-      <main id="home" class="hero-screen" aria-labelledby="divizty-title">
-        <div class="bg-orb orb-left" aria-hidden="true"></div>
-        <div class="bg-orb orb-right" aria-hidden="true"></div>
-        <div class="bg-orb orb-center" aria-hidden="true"></div>
+      <main id="home" class="hero-screen">
+        <div class="bg-orb orb-left"></div>
+        <div class="bg-orb orb-right"></div>
+        <div class="bg-orb orb-center"></div>
 
-        <div class="float-dot dot-1" aria-hidden="true"></div>
-        <div class="float-dot dot-2" aria-hidden="true"></div>
-        <div class="float-dot dot-3" aria-hidden="true"></div>
-        <div class="float-dot dot-4" aria-hidden="true"></div>
-        <div class="float-dot dot-5" aria-hidden="true"></div>
-        <div class="float-dot dot-6" aria-hidden="true"></div>
-        <div class="float-dot dot-7" aria-hidden="true"></div>
-        <div class="float-dot dot-8" aria-hidden="true"></div>
+        <div class="float-dot dot-1"></div>
+        <div class="float-dot dot-2"></div>
+        <div class="float-dot dot-3"></div>
+        <div class="float-dot dot-4"></div>
+        <div class="float-dot dot-5"></div>
+        <div class="float-dot dot-6"></div>
+        <div class="float-dot dot-7"></div>
+        <div class="float-dot dot-8"></div>
 
-        <div class="star-shell" aria-label="โลโก้ DIVIZTY 5">
-          <div class="star" role="img" aria-label="DIVIZTY 5">
+        <div class="star-shell" aria-label="DIVIZTY 5 election poster">
+          <div class="star">
             <div class="star-content">
-              <h1 id="divizty-title" class="main-title">
-                <span class="main-word">DIVIZTY</span>
+              <h1 class="main-title" aria-label="Divizty 5">
+                <span class="main-word">Divizty</span>
                 <span class="main-number">5</span>
               </h1>
 
@@ -68,29 +69,19 @@
               </div>
 
               <div class="cta-stack">
-                <a
-                  href="#profile"
-                  class="cta-btn pink-btn"
-                  aria-label="ทำแบบทดสอบ MBTI"
-                  >MBTI test ↗</a
-                >
-                <a
-                  href="#candidates"
-                  class="cta-btn lime-btn"
-                  aria-label="ไปที่เกม"
-                  >GO TO GAME → CLICK</a
-                >
+                <a href="#profile" class="cta-btn pink-btn">MBTI test ↗</a>
+                <a href="#candidates" class="cta-btn lime-btn">GO TO GAME → CLICK</a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="yellow-note" aria-label="ข้อความสั้น">
+        <div class="yellow-note">
           <span>ต่างกันได้</span>
           <span>ไปด้วยกันได้</span>
         </div>
 
-        <div class="team-badge" id="contact" aria-label="ทีมหมายเลข 5">
+        <div class="team-badge" id="contact">
           <span class="team-label">ทีมหมายเลข</span>
           <span class="team-number">5</span>
         </div>
@@ -98,10 +89,8 @@
 
       <section id="policy" aria-labelledby="policy-heading">
         <div class="container">
-          <h2 id="policy-heading" style="margin: 0 0 1rem; font-size: 1.5rem;">
-            POLICY
-          </h2>
-          <p style="margin: 0 0 1rem; max-width: 48rem;">
+          <h2 id="policy-heading">POLICY</h2>
+          <p>
             เราเชื่อว่าความหลากหลาย คือพลังของชุมชนและเสียงของทุกคนมีคุณค่า
             ทีม DIVIZTY 5 มุ่งสร้างสภาพแวดล้อมที่ทุกคนมีโอกาสได้มีส่วนร่วม
             ได้รับการฟัง และร่วมกันยกระดับโรงเรียนให้ดีขึ้นอย่างยั่งยืน
@@ -111,10 +100,8 @@
 
       <section id="candidates" aria-labelledby="candidates-heading">
         <div class="container">
-          <h2 id="candidates-heading" style="margin: 0 0 1rem; font-size: 1.5rem;">
-            CANDIDATES
-          </h2>
-          <p style="margin: 0 0 1rem; max-width: 48rem;">
+          <h2 id="candidates-heading">CANDIDATES</h2>
+          <p>
             ร่วมค้นหาความคิดสร้างสรรค์ ความเป็นผู้นำ และแนวทางในการทำงานร่วมกัน
             เพื่อขับเคลื่อนการเปลี่ยนแปลงที่ตอบโจทย์ทุกคนในโรงเรียน
           </p>
@@ -123,10 +110,8 @@
 
       <section id="profile" aria-labelledby="profile-heading">
         <div class="container">
-          <h2 id="profile-heading" style="margin: 0 0 1rem; font-size: 1.5rem;">
-            PROFILE
-          </h2>
-          <p style="margin: 0 0 1rem; max-width: 48rem;">
+          <h2 id="profile-heading">PROFILE</h2>
+          <p>
             เราเป็นทีมที่พร้อมเรียนรู้ พัฒนาตัวเอง และเปิดพื้นที่ให้ทุกคนได้เป็นส่วนหนึ่งของการเปลี่ยนแปลง
             ผ่านการสื่อสารที่ยืดหยุ่นและการทำงานที่มีประสิทธิภาพ
           </p>
@@ -134,8 +119,8 @@
       </section>
 
       <footer class="bottom-bar">
-        <nav class="bottom-nav" aria-label="เมนูท้ายหน้า">
-          <a href="#home" class="bottom-pill active" aria-current="page">HOME</a>
+        <nav class="bottom-nav" aria-label="Footer navigation">
+          <a href="#home" class="bottom-pill active">HOME</a>
           <a href="#policy" class="bottom-pill">POLICY</a>
           <a href="#candidates" class="bottom-pill">CANDIDATES</a>
           <a href="#profile" class="bottom-pill">PROFILE</a>
@@ -145,5 +130,7 @@
         <div class="bottom-cta">MEET YOUR NEXT CHAPTER ↓</div>
       </footer>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
